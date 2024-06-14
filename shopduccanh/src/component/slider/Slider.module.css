@@ -1,0 +1,92 @@
+/* Slider.module.css */
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f5f5f5; /* Fallback background color */
+}
+
+.hero__slider {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.hero__items {
+  position: relative;
+  flex: 1 0 100%;
+  min-width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.hero__items.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero__text {
+  text-align: center;
+  max-width: 500px;
+  color: #fff;
+}
+
+.hero__text h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hero__text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero__text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.primary-btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #555;
+}
+
+.hero__social {
+  margin-top: 20px;
+}
+
+.hero__social a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.hero__social a:hover {
+  color: #aaa;
+}
