@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import  './Header.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 const Header = () => {
   const location = useLocation();
@@ -13,7 +18,7 @@ const Header = () => {
             <div className="row">
               <div className="col-lg-6 col-md-7">
                 <div className="header__top__left">
-                  <p>Shop quần áo thể thao</p>
+                  <p>Sports clothing shop</p>
                 </div>
               </div>
               <div className="col-lg-6 col-md-5">

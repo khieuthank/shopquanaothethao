@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import style from './Slider.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -63,8 +64,8 @@ const Slider = () => {
                       <h6>Summer Collection</h6>
                       <h2>{slide.title}</h2>
                       <p>{slide.description}</p>
-                      <a href="#" className="primary-btn">
-                        Shop now <span className="arrow_right"></span>
+                      <a href="#" className={style.primary_btn}> Shop now 
+                      <span></span>
                       </a>
                       <div className={style.hero__social}>
                         <a href="#">

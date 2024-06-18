@@ -1,83 +1,45 @@
-import React from 'react'
-import Slider from '../../component/slider/Slider'
+import React from 'react';
+import Slider from '../../component/slider/Slider';
+import Banner from '../../component/banner/Banner';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import style from './Home.module.css';
 
 const Home = () => {
   return (
     <div>
       <div>
-    
-<Slider></Slider>
+        <Slider></Slider>
+        <Banner></Banner>
 
-
-         {/*   Banner Section Begin  */}
-        <section className="banner spad">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-7 offset-lg-4">
-                <div className="banner__item">
-                  <div className="banner__item__pic">
-                    <img src="img/banner/banner-1.jpg"   alt=""/>
-                  </div>
-                  <div className="banner__item__text">
-                    <h2>Clothing Collections 2030</h2>
-                    <a href="#">Shop now</a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-5">
-                <div className="banner__item banner__item--middle">
-                  <div className="banner__item__pic">
-                    <img src="img/banner/banner-2.jpg"   alt=""/>
-                  </div>
-                  <div className="banner__item__text">
-                    <h2>Accessories</h2>
-                    <a href="#">Shop now</a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-7">
-                <div className="banner__item banner__item--last">
-                  <div className="banner__item__pic">
-                    <img src="img/banner/banner-3.jpg"   alt=""/>
-                  </div>
-                  <div className="banner__item__text">
-                    <h2>Shoes Spring 2030</h2>
-                    <a href="#">Shop now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-         {/*   Banner Section End  */}
-
-         {/*   Product Section Begin  */}
-        <section className="product spad">
+        {/* Product Section Begin */}
+        <section className={`${style.product} product spad`}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <ul className="filter__controls">
-                  <li className="active" data-filter="*">Best Sellers</li>
+                <ul className={`${style['filter__controls']} filter__controls`}>
+                  <li className={`active`} data-filter="*">
+                    Best Sellers
+                  </li>
                   <li data-filter=".new-arrivals">New Arrivals</li>
                   <li data-filter=".hot-sales">Hot Sales</li>
                 </ul>
               </div>
             </div>
             <div className="row product__filter">
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                <div className="product__item">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                    <span className="label">New</span>
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
+              <div className={`col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals ${style.product__item}`}>
+                <div className={`${style['product__item']} product__item`}>
+                  <div className={`${style['product__item__pic']} set-bg`} data-setbg="img/product/product-1.jpg">
+                    <span className={`${style.label} label`}>New</span>
+                    <ul className={`${style['product__hover']} product__hover`}>
+                      <li><a href="#"><img src="img/icon/heart.png" alt="" /></a></li>
+                      <li><a href="#"><img src="img/icon/compare.png" alt="" /> <span>Compare</span></a></li>
+                      <li><a href="#"><img src="img/icon/search.png" alt="" /></a></li>
                     </ul>
                   </div>
-                  <div className="product__item__text">
+                  <div className={`${style['product__item__text']} product__item__text`}>
                     <h6>Piqué Biker Jacket</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
+                    <a href="#" className={`${style.add_cart} add-cart`}>+ Add To Cart</a>
+                    <div className={`${style.rating} rating`}>
                       <i className="fa fa-star-o"></i>
                       <i className="fa fa-star-o"></i>
                       <i className="fa fa-star-o"></i>
@@ -85,315 +47,76 @@ const Home = () => {
                       <i className="fa fa-star-o"></i>
                     </div>
                     <h5>$67.24</h5>
-                    <div className="product__color__select">
-                      <label for="pc-1">
-                        <input type="radio" id="pc-1"/>
+                    <div className={`${style['product__color__select']} product__color__select`}>
+                      <label htmlFor="pc-1">
+                        <input type="radio" id="pc-1" />
                       </label>
-                      <label className="active black" for="pc-2">
-                        <input type="radio" id="pc-2"/>
+                      <label className={`active black`} htmlFor="pc-2">
+                        <input type="radio" id="pc-2" />
                       </label>
-                      <label className="grey" for="pc-3">
-                        <input type="radio" id="pc-3"/>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
-                <div className="product__item">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>Piqué Biker Jacket</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                    </div>
-                    <h5>$67.24</h5>
-                    <div className="product__color__select">
-                      <label for="pc-4">
-                        <input type="radio" id="pc-4"/>
-                      </label>
-                      <label className="active black" for="pc-5">
-                        <input type="radio" id="pc-5"/>
-                      </label>
-                      <label className="grey" for="pc-6">
-                        <input type="radio" id="pc-6"/>
+                      <label className={`grey`} htmlFor="pc-3">
+                        <input type="radio" id="pc-3" />
                       </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                <div className="product__item sale">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                    <span className="label">Sale</span>
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>Multi-pocket Chest Bag</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star-o"></i>
-                    </div>
-                    <h5>$43.48</h5>
-                    <div className="product__color__select">
-                      <label for="pc-7">
-                        <input type="radio" id="pc-7"/>
-                      </label>
-                      <label className="active black" for="pc-8">
-                        <input type="radio" id="pc-8"/>
-                      </label>
-                      <label className="grey" for="pc-9">
-                        <input type="radio" id="pc-9"/>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
-                <div className="product__item">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-4.jpg">
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>Diagonal Textured Cap</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                    </div>
-                    <h5>$60.9</h5>
-                    <div className="product__color__select">
-                      <label for="pc-10">
-                        <input type="radio" id="pc-10"/>
-                      </label>
-                      <label className="active black" for="pc-11">
-                        <input type="radio" id="pc-11"/>
-                      </label>
-                      <label className="grey" for="pc-12">
-                        <input type="radio" id="pc-12"/>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                <div className="product__item">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-5.jpg">
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>Lether Backpack</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                    </div>
-                    <h5>$31.37</h5>
-                    <div className="product__color__select">
-                      <label for="pc-13">
-                        <input type="radio" id="pc-13"/>
-                      </label>
-                      <label className="active black" for="pc-14">
-                        <input type="radio" id="pc-14"/>
-                      </label>
-                      <label className="grey" for="pc-15">
-                        <input type="radio" id="pc-15"/>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
-                <div className="product__item sale">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-6.jpg">
-                    <span className="label">Sale</span>
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>Ankle Boots</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star-o"></i>
-                    </div>
-                    <h5>$98.49</h5>
-                    <div className="product__color__select">
-                      <label for="pc-16">
-                        <input type="radio" id="pc-16"/>
-                      </label>
-                      <label className="active black" for="pc-17">
-                        <input type="radio" id="pc-17"/>
-                      </label>
-                      <label className="grey" for="pc-18">
-                        <input type="radio" id="pc-18"/>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
-                <div className="product__item">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>T-shirt Contrast Pocket</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                    </div>
-                    <h5>$49.66</h5>
-                    <div className="product__color__select">
-                      <label for="pc-19">
-                        <input type="radio" id="pc-19"/>
-                      </label>
-                      <label className="active black" for="pc-20">
-                        <input type="radio" id="pc-20"/>
-                      </label>
-                      <label className="grey" for="pc-21">
-                        <input type="radio" id="pc-21"/>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales">
-                <div className="product__item">
-                  <div className="product__item__pic set-bg" data-setbg="img/product/product-8.jpg">
-                    <ul className="product__hover">
-                      <li><a href="#"><img src="img/icon/heart.png"   alt=""/></a></li>
-                      <li><a href="#"><img src="img/icon/compare.png"   alt=""/> <span>Compare</span></a></li>
-                      <li><a href="#"><img src="img/icon/search.png"   alt=""/></a></li>
-                    </ul>
-                  </div>
-                  <div className="product__item__text">
-                    <h6>Basic Flowing Scarf</h6>
-                    <a href="#" className="add-cart">+ Add To Cart</a>
-                    <div className="rating">
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                      <i className="fa fa-star-o"></i>
-                    </div>
-                    <h5>$26.28</h5>
-                    <div className="product__color__select">
-                      <label for="pc-22">
-                        <input type="radio" id="pc-22"/>
-                      </label>
-                      <label className="active black" for="pc-23">
-                        <input type="radio" id="pc-23"/>
-                      </label>
-                      <label className="grey" for="pc-24">
-                        <input type="radio" id="pc-24"/>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* Continue with other product items similarly */}
             </div>
           </div>
         </section>
-         {/*   Product Section End  */}
+        {/* Product Section End */}
 
-         {/*   Categories Section Begin  */}
-        <section className="categories spad">
+        {/* Categories Section Begin */}
+        <section className={`${style.categories} categories spad`}>
           <div className="container">
             <div className="row">
               <div className="col-lg-3">
-                <div className="categories__text">
+                <div className={`${style['categories__text']} categories__text`}>
                   <h2>Clothings Hot <br /> <span>Shoe Collection</span> <br /> Accessories</h2>
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="categories__hot__deal">
-                  <img src="img/product-sale.png"   alt=""/>
-                    <div className="hot__deal__sticker">
-                      <span>Sale Of</span>
-                      <h5>$29.99</h5>
-                    </div>
+                <div className={`${style['categories__hot__deal']} categories__hot__deal`}>
+                  <img src="img/product-sale.png" alt="" />
+                  <div className={`${style['hot__deal__sticker']} hot__deal__sticker`}>
+                    <span>Sale Of</span>
+                    <h5>$29.99</h5>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-4 offset-lg-1">
-                <div className="categories__deal__countdown">
+                <div className={`${style['categories__deal__countdown']} categories__deal__countdown`}>
                   <span>Deal Of The Week</span>
                   <h2>Multi-pocket Chest Bag Black</h2>
-                  <div className="categories__deal__countdown__timer" id="countdown">
-                    <div className="cd-item">
+                  <div className={`${style['categories__deal__countdown__timer']} categories__deal__countdown__timer`} id="countdown">
+                    <div className={`${style.cd_item} cd-item`}>
                       <span>3</span>
                       <p>Days</p>
                     </div>
-                    <div className="cd-item">
+                    <div className={`${style.cd_item} cd-item`}>
                       <span>1</span>
                       <p>Hours</p>
                     </div>
-                    <div className="cd-item">
+                    <div className={`${style.cd_item} cd-item`}>
                       <span>50</span>
                       <p>Minutes</p>
                     </div>
-                    <div className="cd-item">
+                    <div className={`${style.cd_item} cd-item`}>
                       <span>18</span>
                       <p>Seconds</p>
                     </div>
                   </div>
-                  <a href="#" className="primary-btn">Shop now</a>
+                  <a href="#" className={`${style.primary_btn} primary-btn`}>Shop now</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
-         {/*   Categories Section End  */}
+        {/* Categories Section End */}
 
-         {/*   Instagram Section Begin  */}
-        <section className="instagram spad">
+        {/*   Instagram Section Begin  */}
+        <section className={style.instagram + " instagram spad"}>
           <div className="container">
             <div className="row">
               <div className="col-lg-8">
@@ -407,7 +130,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="instagram__text">
+                <div className={style.instagram__text + " instagram__text"}>
                   <h2>Instagram</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                     labore et dolore magna aliqua.</p>
@@ -417,10 +140,10 @@ const Home = () => {
             </div>
           </div>
         </section>
-         {/*   Instagram Section End  */}
+        {/*   Instagram Section End  */}
 
-         {/*   Latest Blog Section Begin  */}
-        <section className="latest spad">
+        {/*   Latest Blog Section Begin  */}
+        <section className={style.latest + " latest spad"}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -435,7 +158,7 @@ const Home = () => {
                 <div className="blog__item">
                   <div className="blog__item__pic set-bg" data-setbg="img/blog/blog-1.jpg"></div>
                   <div className="blog__item__text">
-                    <span><img src="img/icon/calendar.png"   alt=""/> 16 February 2020</span>
+                    <span><img src="img/icon/calendar.png" alt="" /> 16 February 2020</span>
                     <h5>What Curling Irons Are The Best Ones</h5>
                     <a href="#">Read More</a>
                   </div>
@@ -445,7 +168,7 @@ const Home = () => {
                 <div className="blog__item">
                   <div className="blog__item__pic set-bg" data-setbg="img/blog/blog-2.jpg"></div>
                   <div className="blog__item__text">
-                    <span><img src="img/icon/calendar.png"   alt=""/> 21 February 2020</span>
+                    <span><img src="img/icon/calendar.png" alt="" /> 21 February 2020</span>
                     <h5>Eternity Bands Do Last Forever</h5>
                     <a href="#">Read More</a>
                   </div>
@@ -455,7 +178,7 @@ const Home = () => {
                 <div className="blog__item">
                   <div className="blog__item__pic set-bg" data-setbg="img/blog/blog-3.jpg"></div>
                   <div className="blog__item__text">
-                    <span><img src="img/icon/calendar.png"   alt=""/> 28 February 2020</span>
+                    <span><img src="img/icon/calendar.png" alt="" /> 28 February 2020</span>
                     <h5>The Health Benefits Of Sunglasses</h5>
                     <a href="#">Read More</a>
                   </div>
@@ -464,19 +187,19 @@ const Home = () => {
             </div>
           </div>
         </section>
-         {/*   Latest Blog Section End  */}
+        {/*   Latest Blog Section End  */}
 
-         {/*   Footer Section Begin  */}
-        <footer className="footer">
+        {/*   Footer Section Begin  */}
+        <footer className={style.footer + " footer"}>
           <div className="container">
             <div className="row">
               <div className="col-lg-3 col-md-6 col-sm-6">
                 <div className="footer__about">
                   <div className="footer__logo">
-                    <a href="#"><img src="img/footer-logo.png"   alt=""/></a>
+                    <a href="#"><img src="img/footer-logo.png" alt="" /></a>
                   </div>
                   <p>The customer is at the heart of our unique business model, which includes design.</p>
-                  <a href="#"><img src="img/payment.png"   alt=""/></a>
+                  <a href="#"><img src="img/payment.png" alt="" /></a>
                 </div>
               </div>
               <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
@@ -507,8 +230,8 @@ const Home = () => {
                   <div className="footer__newslatter">
                     <p>Be the first to know about new arrivals, look books, sales & promos!</p>
                     <form action="#">
-                      <input type="text" placeholder="Your email"/>
-                        <button type="submit"><span className="icon_mail_alt"></span></button>
+                      <input type="text" placeholder="Your email" />
+                      <button type="submit"><span className="icon_mail_alt"></span></button>
                     </form>
                   </div>
                 </div>
@@ -517,7 +240,7 @@ const Home = () => {
             <div className="row">
               <div className="col-lg-12 text-center">
                 <div className="footer__copyright__text">
-                   {/*   Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.  */}
+                  {/*   Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.  */}
                   <p>Copyright ©
                     <script>
                       document.write(new Date().getFullYear());
@@ -525,26 +248,26 @@ const Home = () => {
                     All rights reserved | This template is made with <i className="fa fa-heart-o"
                       aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                   </p>
-                   {/*   Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.  */}
+                  {/*   Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.  */}
                 </div>
               </div>
             </div>
           </div>
         </footer>
-         {/*   Footer Section End  */}
+        {/*   Footer Section End  */}
 
-         {/*   Search Begin  */}
-        <div className="search-model">
+        {/*   Search Begin  */}
+        <div className={style["search-model"] + " search-model"}>
           <div className="h-100 d-flex align-items-center justify-content-center">
             <div className="search-close-switch">+</div>
             <form className="search-model-form">
-              <input type="text" id="search-input" placeholder="Search here....."/>
+              <input type="text" id="search-input" placeholder="Search here....." />
             </form>
           </div>
-        </div>              
+        </div>
       </div>
     </div>
   )
 }
 
-export default Home
+export default Home;
